@@ -6,14 +6,7 @@ var codeMain = function(filmData)
     //var movieholder = 
         
         
-    d3.select("#movie-holder")
-        .on("click",function(){
-                d3.select("#2baf70d1")
-                    .append("p")
-                    .selectAll("span")
-                    .attr("class","movie_description")
-                    .text(function(d){return d.description})
-                    })
+ 
     
     
   
@@ -22,6 +15,8 @@ var codeMain = function(filmData)
 //code to add in and bind the data
 var addtopageData = function(filmData)
 {
+        
+    
         d3.select("#movie-holder")
         .append("div")
         .selectAll("span")
@@ -29,8 +24,16 @@ var addtopageData = function(filmData)
         .enter()
         .append("div")
         .attr("class","movie_icon")
-        .attr("id",function(d){return d.id.split("-")[0]})
-        .text(function(d){return d.title})
+        .attr("id",function(aFilmData){return "I" + aFilmData.id})
+        .text(function(aFilmData){return aFilmData.title})
+        .on("click",function(aFilmData){
+                d3.selectAll(".movie_description").remove()
+                //console.log(aFilmData.title)
+                d3.select("#info-box")
+                    .append("div")
+                    .attr("class","movie_description")
+                    .text(function(){return aFilmData.description})
+                    })
 }
 
 // Promise to get data from API
