@@ -1,3 +1,6 @@
+body{
+    
+}
 #heading {
     border: 1px solid black;
     
@@ -8,8 +11,7 @@
 #movie-holder{
     border: 1px solid black;
     height: 300px;
-    width: 100%;
-    overflow: auto
+    overflow: scroll
 }
 #info-box{
     border: 1px solid black;
@@ -17,18 +19,18 @@
 .movie_icon
 {
     border: 1px solid black;
-    margin: 4px;
+    margin: 10px;
     padding: 10px;
     float: left;
-    width: 30%;
+    clear: right;
+    width: 200px;
     height: 30px
 }
 .movie_icon:hover
 {
-    border: 5px solid black;
-    margin: 1px;
-    padding: 5px;
-    float: left;
-    width: 30%;
-    height: 30px
+    border-color: red;
+}
+#2baf70d1
+{ 
+    border: 10px solid green;
 }
