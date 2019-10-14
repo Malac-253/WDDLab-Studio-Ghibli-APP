@@ -7,7 +7,28 @@
 }
 #movie-holder{
     border: 1px solid black;
+    height: 300px;
+    width: 100%;
+    overflow: auto
 }
 #info-box{
     border: 1px solid black;
+}
+.movie_icon
+{
+    border: 1px solid black;
+    margin: 4px;
+    padding: 10px;
+    float: left;
+    width: 30%;
+    height: 30px
+}
+.movie_icon:hover
+{
+    border: 5px solid black;
+    margin: 1px;
+    padding: 5px;
+    float: left;
+    width: 30%;
+    height: 30px
 }
