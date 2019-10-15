@@ -3,18 +3,22 @@ body{
 }
 #heading {
     border: 1px solid black;
+    margin-bottom: 10px;
     
 }
 #banner{
     border: 1px solid black;
+    margin-bottom: 10px
 }
 #movie-holder{
     border: 1px solid black;
     height: 300px;
     overflow: scroll
+        
 }
 #info-box{
     border: 1px solid black;
+    margin-bottom: 10px
 }
 .movie_icon
 {
@@ -26,7 +30,7 @@ body{
     width: 200px;
     height: 30px
 }
-.movie_icon:hover
+
 {
     border-color: red;
 }
@@ -36,7 +40,12 @@ body{
 }
 
 #back-button{
-    border: 1px solid black;
+    border: 1px solid green;
     height: 40px;
     width: 40px;
 }
+body {background-image: url(https://live.staticflickr.com/2207/2113036232_d109586d92_b.jpg)}
+div{background-color: aquamarine}
+div{font-family:fantasy}
+
+
