@@ -34,7 +34,7 @@ var drawFilmpage = function(aFilmData,filmData)
         d3.select("#banner").append("p").attr("class","rt_score").text("Rotten Tomatoes Score: "+aFilmData.rt_score)
         d3.select("body").append("div").attr("id", "info-box").text("")
         d3.select("#info-box").append("p").attr("class","movie_description").text("Description:  "+aFilmData.description)
-        d3.select("body").append("div").attr("id", "back-button").text("Go Back")           .on("click",function(aFilmData){
+        d3.select("body").append("div").attr("id", "back-button").text("Click to Go Back")           .on("click",function(aFilmData){
                 d3.selectAll("body *").remove()
         d3.select("body").append("script").attr("src", "https://d3js.org/d3.v5.min.js")
     
@@ -54,6 +54,7 @@ var drawFilmpage = function(aFilmData,filmData)
                     function(err)
                     {
                         console.log("Failure - Error : ", err)
+                        d3.select("#heading").append("p").attr("id","heading-text").text(" Backup Movie Load failed  - Check Back later")
                     }
                 )
 
@@ -102,5 +103,6 @@ dataPromise.then(
     function(err)
     {
         console.log("Failure - Error : ", err)
+        d3.select("#heading").append("p").attr("id","heading-text").text(" Full Movie Load failed - Check Back later")
     }
 )
